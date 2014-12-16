@@ -1,3 +1,5 @@
+from django.db.models.query import QuerySet
+
 class Model(object):
     _meta = None
     objects = None
@@ -7,3 +9,6 @@ class Model(object):
 
     MultipleObjectsReturned = None
     DoesNotExist = None
+
+class Manager(QuerySet):
+    pass
